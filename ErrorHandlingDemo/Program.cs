@@ -19,12 +19,25 @@ namespace ErrorHandlingDemo
 
             // EXAMPLE 2
 
-            Account bankAccount = new Account("Greg");
-            bankAccount.FindTransaction(12);
-            Console.ReadKey();
+            //Account bankAccount = new Account("Greg");
+            //bankAccount.FindTransaction(12);
+            //Console.ReadKey();
 
             // EXAMPLE 3
 
+            Account bankAccount2 = new Account("Joe");
+
+            try
+            {
+                Console.WriteLine("Please enter the transaction number you are looking for!");
+                double result = bankAccount2.FindTransaction(int.Parse(Console.ReadLine()));
+                Console.WriteLine($"Your transaction balance is {result}");
+            }
+            catch (AccountIsZeroException ex)
+            {
+                Console.WriteLine($"Transaction does not exist! \n {ex.StackTrace}");
+                
+            }
 
         }
     }
