@@ -26,6 +26,7 @@ namespace ErrorHandlingDemo
             // EXAMPLE 3
 
             Account bankAccount2 = new Account("Joe");
+            bankAccount2.DepositFunds(100);
 
             try
             {

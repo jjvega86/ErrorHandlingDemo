@@ -42,6 +42,10 @@ namespace ErrorHandlingDemo
 
         public double FindTransaction(int position)
         {
+            // EXAMPLE 2
+            // return _transactions[position]; 
+
+            // EXAMPLE 3
             double foundTransaction = 0;
             try
             {
