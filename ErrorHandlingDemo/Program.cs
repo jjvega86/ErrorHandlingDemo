@@ -20,8 +20,11 @@ namespace ErrorHandlingDemo
             // EXAMPLE 2
 
             Account bankAccount = new Account("Greg");
-            bankAccount.GetAccountBalance();
+            bankAccount.FindTransaction(12);
             Console.ReadKey();
+
+            // EXAMPLE 3
+
 
         }
     }

@@ -42,7 +42,17 @@ namespace ErrorHandlingDemo
 
         public double FindTransaction(int position)
         {
-            return _transactions[position];
+            double output = 0;
+            try
+            {
+                return _transactions[position];
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex.Message}");
+            }
+
+            return output;
         }
 
     }
