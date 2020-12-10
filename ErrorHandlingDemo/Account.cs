@@ -42,7 +42,24 @@ namespace ErrorHandlingDemo
 
         public double FindTransaction(int position)
         {
-            return _transactions[position];  
+            double foundTransaction = 0;
+            try
+            {
+                Console.WriteLine("Accessing account!");
+                foundTransaction =  _transactions[position];
+            }
+            catch (Exception)
+            {
+                throw new ArgumentException("Transaction doesn't exist!");
+              
+            }
+            finally
+            {
+                Console.WriteLine("Logged out of account. Thank you!");
+
+            }
+
+            return foundTransaction;
         }
 
 

@@ -27,13 +27,22 @@ namespace ErrorHandlingDemo
 
             Account bankAccount2 = new Account("Joe");
 
-            
-            
+            try
+            {
                 Console.WriteLine("Please enter the transaction number you are looking for!");
                 double result = bankAccount2.FindTransaction(int.Parse(Console.ReadLine()));
                 Console.WriteLine($"Your transaction balance is {result}");
-            
-            
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+
+            Console.ReadLine();
+
+
+
 
         }
     }
