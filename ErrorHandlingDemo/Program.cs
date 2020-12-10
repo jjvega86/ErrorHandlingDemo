@@ -12,10 +12,16 @@ namespace ErrorHandlingDemo
         {
             // EXAMPLE 1
 
-            List<int> list1 = new List<int>() { 1, 2, 3, 4, 5 };
+            //List<int> list1 = new List<int>() { 1, 2, 3, 4, 5 };
 
-            Console.WriteLine(list1[6]);
-            Console.ReadLine();
+            //Console.WriteLine(list1[6]);
+            //Console.ReadLine();
+
+            // EXAMPLE 2
+
+            Account bankAccount = new Account("Greg");
+            bankAccount.GetAccountBalance();
+            Console.ReadKey();
 
         }
     }
